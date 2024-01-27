@@ -130,7 +130,11 @@ function App() {
   };
 
   const handleAddReviewClick = () => {
-    if (overallRating === 0 || !headline.trim() || !writtenReview.trim()) {
+    if (
+      overallRating === 0 ||
+      headline.trim().length < 4 ||
+      writtenReview.trim().length < 15
+    ) {
       return;
     }
 
@@ -177,7 +181,11 @@ function App() {
   };
 
   const handleSaveEdit = () => {
-    if (overallRating === 0 || !headline.trim() || !writtenReview.trim()) {
+    if (
+      overallRating === 0 ||
+      headline.trim().length < 4 ||
+      writtenReview.trim().length < 15
+    ) {
       return;
     }
 
